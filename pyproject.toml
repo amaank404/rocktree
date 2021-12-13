@@ -7,7 +7,8 @@ license = "LGPL-2.1-only"
 homepage = "https://github.com/xcodz-dot/rocktree"
 repository = "https://github.com/xcodz-dot/rocktree"
 packages = [
-    { include = "rocktree.py", from = 'src' }
+    { include = "rocktree.py", from = 'src' },
+    { include = "rocktree_server.py", from = 'src'}
 ]
 readme = "README.md"
 

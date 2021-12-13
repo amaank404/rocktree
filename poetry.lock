@@ -1,0 +1,18 @@
+[[package]]
+name = "patchutils"
+version = "1.1.2"
+description = "Work on patches based on files and directories"
+category = "main"
+optional = false
+python-versions = ">=3.6,<4.0"
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.6"
+content-hash = "b35a140bed0bdb41d288b8b634908512ecd9c6cd445c4da54de812b5a1c13710"
+
+[metadata.files]
+patchutils = [
+    {file = "patchutils-1.1.2-py3-none-any.whl", hash = "sha256:054dbf2e65ad9fb4aa7726302569858a9d68e75badc3ae7778b1756e2c9b0c9d"},
+    {file = "patchutils-1.1.2.tar.gz", hash = "sha256:9b3c0d8fba5478d29b581985d07c178aad66b23589da91ee4845b2c74a92767b"},
+]
