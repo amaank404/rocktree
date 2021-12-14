@@ -23,7 +23,12 @@ class RockTreeServer:
     use `update_interval` to specify when to update the in memory directory information from disk.
     """
 
-    def __init__(self, directory: str = ".", update_interval: int = None, logfp: TextIO = sys.stderr):
+    def __init__(
+        self,
+        directory: str = ".",
+        update_interval: int = None,
+        logfp: TextIO = sys.stderr,
+    ):
         self.logger = logging.Logger("RockTreeServer")
         self.logger.addHandler(logging.StreamHandler(logfp))
         self.logger.debug("Initialized the logger")
@@ -58,12 +63,15 @@ class RockTreeServer:
         self.lock.acquire()
         self.lock.release()
         self.logger.info("Download requested: %s", filename)
-        return send_from_directory(os.path.join(os.getcwd(), self.directory), filename, as_attachment=True)
+        return send_from_directory(
+            os.path.join(os.getcwd(), self.directory), filename, as_attachment=True
+        )
 
     def _scheduled_update(self):
         if self.update_interval is None:
             self.logger.warn(
-                "Scheduled updates are disabled due to update_interval being None")
+                "Scheduled updates are disabled due to update_interval being None"
+            )
             return
 
         while True:
@@ -96,7 +104,8 @@ class RockTreeServer:
             http_server.serve_forever()
         else:
             self.logger.warning(
-                "Gevent server not found. Please install pip package`rocktree[server-gevent]`")
+                "Gevent server not found. Please install pip package`rocktree[server-gevent]`"
+            )
             return False
         return True
 
