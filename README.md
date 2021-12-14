@@ -15,7 +15,7 @@ out all the local changes as soon as the changes are pulled from
 upstream. It works on the bases of [`patchutils`](https://github.com/xcodz-dot/patchutils)
 which works on the bases of patchfiles, update files and directory trees.
 
-To download from upstream for the first time you can use the `rocktree.clone(url="http://my_url.com/repo")`
+To download from upstream for the first time you can use the `rocktree.clone(url="http://my_url.com/repo", dir="local_repo")`
 after that the repo should contain a `.rocktree` file which contains the
 upstream link. You can then use the method `rocktree.update_from_file(dir="local_repo")`.
 You can also force update from a specified repo using the provided method
